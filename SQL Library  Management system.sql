@@ -61,6 +61,29 @@ INSERT INTO customer(Customer_id,Customer_name,Customer_address,Reg_date)
 
    Select * from Customer;
 
+CREATE TABLE Books
+  (
+   ISBN VARCHAR(30) PRIMARY KEY,
+   Book_title VARCHAR(80),
+   Category VARCHAR(30),
+   Rental_Price DECIMAL(10,2),
+   status varchar(54),
+   Author VARCHAR(30),   
+   Publisher VARCHAR(30),
+); 
+INSERT INTO Books VALUES
+('978-0-553-29698-2', 'The Catcher in the Rye', 'Classic', 7.00,'yes','J.D. Salinger', 'Little Brown and Company'),
+('978-0-330-25864-8', 'Animal Farm', 'Classic', 5.50, 'yes', 'George Orwell', 'Penguin Books'),
+('978-0-14-118776-1', 'One Hundred Years  Solitude', 'Literary Fiction', 6.50, 'yes', 'Gabriel Garcia Marquez', 'Penguin Books'),
+('978-0-525-47535-5', 'The Great Gatsby', 'Classic', 8.00, 'yes', ' Scott Fitzgerald', 'Scribner'),
+('978-0-141-44171-6', 'Jane Eyre', 'Classic', 4.00, 'yes', 'Charlotte Bronte', 'Penguin Classics'),
+('978-0-307-37840-1', 'The Alchemist', 'Fiction', 2.50, 'yes', 'Paulo Coelho', 'HarperOne'),
+('978-0-679-76489-8', 'Harry Potter and the Sorcerers Stone', 'Fantasy', 7.00, 'yes', 'J.K. Rowling', 'Scholastic'),
+('978-0-7432-4722-4', 'The Da Vinci Code', 'Mystery', 8.00, 'yes', 'Dan Brown', 'Doubleday'),
+('978-0-09-957807-9', 'A Game of Thrones', 'Fantasy', 7.50, 'yes', 'George R.R. Martin', 'Bantam'),
+('978-0-393-05081-8', 'A Peoples History of the United States',' History', 9.00, 'yes', 'Howard Zinn', 'Harper Perennial');
+
+Select * from Books
 
 CREATE TABLE IssueStatus 
 (
@@ -98,30 +121,6 @@ INSERT INTO ReturnStatus VALUES
   ('RS105', 'C110', 'Jane Eyre', '2024-04-10', '978-0-141-44171-6');
 
  Select * from ReturnStatus;
-
-CREATE TABLE Books
-  (
-   ISBN VARCHAR(30) PRIMARY KEY,
-   Book_title VARCHAR(80),
-   Category VARCHAR(30),
-   Rental_Price DECIMAL(10,2),
-   status varchar(54),
-   Author VARCHAR(30),   
-   Publisher VARCHAR(30),
-); 
-INSERT INTO Books VALUES
-('978-0-553-29698-2', 'The Catcher in the Rye', 'Classic', 7.00,'yes','J.D. Salinger', 'Little Brown and Company'),
-('978-0-330-25864-8', 'Animal Farm', 'Classic', 5.50, 'yes', 'George Orwell', 'Penguin Books'),
-('978-0-14-118776-1', 'One Hundred Years  Solitude', 'Literary Fiction', 6.50, 'yes', 'Gabriel Garcia Marquez', 'Penguin Books'),
-('978-0-525-47535-5', 'The Great Gatsby', 'Classic', 8.00, 'yes', ' Scott Fitzgerald', 'Scribner'),
-('978-0-141-44171-6', 'Jane Eyre', 'Classic', 4.00, 'yes', 'Charlotte Bronte', 'Penguin Classics'),
-('978-0-307-37840-1', 'The Alchemist', 'Fiction', 2.50, 'yes', 'Paulo Coelho', 'HarperOne'),
-('978-0-679-76489-8', 'Harry Potter and the Sorcerers Stone', 'Fantasy', 7.00, 'yes', 'J.K. Rowling', 'Scholastic'),
-('978-0-7432-4722-4', 'The Da Vinci Code', 'Mystery', 8.00, 'yes', 'Dan Brown', 'Doubleday'),
-('978-0-09-957807-9', 'A Game of Thrones', 'Fantasy', 7.50, 'yes', 'George R.R. Martin', 'Bantam'),
-('978-0-393-05081-8', 'A Peoples History of the United States',' History', 9.00, 'yes', 'Howard Zinn', 'Harper Perennial');
-
-Select * from Books
 
   -----------/*Queries*/--------------------
 
